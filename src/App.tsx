@@ -1,13 +1,11 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <View style={styles.main}>
-        <Text>Digital House</Text>
-      </View>
-    </SafeAreaView>
+    <View style={styles.main}>
+      <Text style={styles.label}>Digital House</Text>
+    </View>
   );
 };
 
@@ -16,6 +14,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignSelf: 'center',
     justifyContent: 'center',
+  },
+  label: {
+    fontFamily: 'Avenir',
   },
 });
 
