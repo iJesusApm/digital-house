@@ -4,7 +4,7 @@ import {COLORS} from '../styles/colors';
 
 const Loader = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="loader">
       <ActivityIndicator size="large" color={COLORS.PRIMARY} />
     </View>
   );

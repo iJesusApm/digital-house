@@ -10,7 +10,7 @@ type Props = {
 
 const Button = ({handlePress, children}: Props) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={handlePress}>
+    <TouchableOpacity style={styles.button} onPress={handlePress} testID="button-test">
       {children}
     </TouchableOpacity>
   );
