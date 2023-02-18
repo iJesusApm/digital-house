@@ -59,7 +59,12 @@
     ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      "./src/assets/"
+      "./src/assets/",
+      "./src/mocks/",
+      "./src/navigations/",
+      "./src/services/",
+      "./src/types/",
+      "./src/App"
     ]
   }
 }
