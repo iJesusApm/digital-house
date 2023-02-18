@@ -6,4 +6,5 @@ export const COLORS = {
   PRIMARY: '#334FFA',
   POSITIVE: '#00B833',
   NEGATIVE: '#FF0000',
+  DETAIL_BACKGROUND: '#CFD6FF',
 };

@@ -1,10 +1,12 @@
 import React from 'react';
-import {FlatList, StyleSheet, View, Text, Image} from 'react-native';
+import {FlatList, StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 import {COLORS} from '../../../styles/colors';
-import Wrapper from '../components/Wrapper';
+import DescriptionWrapper from '../../../components/DescriptionWrapper';
 import {TProduct} from '../../../types/product';
 import {EMPTY_IMAGE, RIGHT_ARROW} from '../../../assets/resources';
 import {dateFormat} from '../../../utils/dateFormat';
+import {useNavigation} from '@react-navigation/native';
+import {SCREENS_ROUTES} from '../../../navigations/constans';
 
 type ItemProps = {
   product: TProduct;
@@ -15,6 +17,8 @@ type ListProps = {
 };
 
 const Product = ({product}: ItemProps) => {
+  const navigation = useNavigation();
+
   const defineSymbol = (redemption: boolean): string => {
     return redemption ? '-' : '+';
   };
@@ -23,8 +27,11 @@ const Product = ({product}: ItemProps) => {
     return {color: redemption ? COLORS.NEGATIVE : COLORS.POSITIVE};
   };
 
+  const handlePress = () => {
+    navigation.navigate(SCREENS_ROUTES.DETAIL, {product});
+  };
   return (
-    <View style={styles.row}>
+    <TouchableOpacity style={styles.row} onPress={handlePress}>
       <View style={styles.item}>
         <Image
           source={product.image ? {uri: product.image, cache: 'reload'} : EMPTY_IMAGE.imageSource}
@@ -43,13 +50,13 @@ const Product = ({product}: ItemProps) => {
         </Text>
         <Image source={RIGHT_ARROW.imageSource} style={styles.icon} resizeMode="stretch" />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
 const Movements = ({list}: ListProps) => {
   return (
-    <Wrapper title="TUS MOVIMIENTOS">
+    <DescriptionWrapper title="TUS MOVIMIENTOS">
       <View style={styles.container}>
         <FlatList
           data={list}
@@ -59,7 +66,7 @@ const Movements = ({list}: ListProps) => {
           showsVerticalScrollIndicator={false}
         />
       </View>
-    </Wrapper>
+    </DescriptionWrapper>
   );
 };
 

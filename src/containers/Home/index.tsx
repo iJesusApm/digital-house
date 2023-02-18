@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, SafeAreaView} from 'react-native';
+import {View, StyleSheet, SafeAreaView, StatusBar} from 'react-native';
 import {data} from '../../mocks/data';
 import {COLORS} from '../../styles/colors';
 import Footer from './components/Footer';
@@ -28,6 +28,8 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView style={styles.wrapper}>
+      <StatusBar backgroundColor={COLORS.WHITE} barStyle="dark-content" />
+
       <View style={styles.container}>
         <Header />
         <Points />

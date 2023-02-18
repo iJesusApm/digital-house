@@ -1,18 +1,18 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import DescriptionWrapper from '../../../components/DescriptionWrapper';
 import {COLORS} from '../../../styles/colors';
-import Wrapper from '../components/Wrapper';
 
 const Points = ({points = '10,00.00'}) => {
   return (
-    <Wrapper title="TUS PUNTOS">
+    <DescriptionWrapper title="TUS PUNTOS">
       <View style={styles.center}>
         <View style={styles.info}>
           <Text style={styles.monthLabel}>Diciembre</Text>
           <Text style={styles.pointsLabel}>{points} pts</Text>
         </View>
       </View>
-    </Wrapper>
+    </DescriptionWrapper>
   );
 };
 

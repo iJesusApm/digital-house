@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {COLORS} from '../../../styles/colors';
+import {COLORS} from '../styles/colors';
 
 type Props = {
   title: string;
@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   title: {
-    textTransform: 'uppercase',
     fontFamily: 'Avenir',
     fontWeight: '800',
     fontSize: 14,
