@@ -4,4 +4,6 @@ export const COLORS = {
   BLACK: '#000000',
   GRAY: '#9B9898',
   PRIMARY: '#334FFA',
+  POSITIVE: '#00B833',
+  NEGATIVE: '#FF0000',
 };

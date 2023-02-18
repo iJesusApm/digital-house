@@ -1,21 +1,43 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, StyleSheet, SafeAreaView} from 'react-native';
+import {data} from '../../mocks/data';
 import {COLORS} from '../../styles/colors';
 import Footer from './components/Footer';
-// import {useNavigation} from '@react-navigation/native';
 import Header from './components/Header';
 import Movements from './molecules/Movements';
 import Points from './molecules/Points';
 
 const HomeScreen = () => {
-  // const navigation = useNavigation();
+  const [products, setProducts] = useState(data);
+  const [hasMultipleOptions, setHasMultipleOptions] = useState(true);
+
+  const redeemedProducts = () => {
+    setProducts(data.filter(item => item.is_redemption === true));
+    setHasMultipleOptions(false);
+  };
+
+  const wonProducts = () => {
+    setProducts(data.filter(item => item.is_redemption === false));
+    setHasMultipleOptions(false);
+  };
+
+  const allProducts = () => {
+    setProducts(data);
+    setHasMultipleOptions(true);
+  };
+
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.container}>
         <Header />
         <Points />
-        <Movements />
-        <Footer />
+        <Movements list={products} />
+        <Footer
+          primaryPress={wonProducts}
+          secondaryPress={redeemedProducts}
+          singlePress={allProducts}
+          hasMultipleOptions={hasMultipleOptions}
+        />
       </View>
     </SafeAreaView>
   );
@@ -29,9 +51,6 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: 20,
     marginTop: 20,
-  },
-  label: {
-    fontFamily: 'Avenir',
   },
 });
 

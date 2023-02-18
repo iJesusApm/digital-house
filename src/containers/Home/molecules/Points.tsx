@@ -1,32 +1,22 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {COLORS} from '../../../styles/colors';
+import Wrapper from '../components/Wrapper';
 
 const Points = ({points = '10,00.00'}) => {
   return (
-    <View style={styles.wraper}>
-      <Text style={styles.title}>TUS PUNTOS</Text>
+    <Wrapper title="TUS PUNTOS">
       <View style={styles.center}>
         <View style={styles.info}>
           <Text style={styles.monthLabel}>Diciembre</Text>
           <Text style={styles.pointsLabel}>{points} pts</Text>
         </View>
       </View>
-    </View>
+    </Wrapper>
   );
 };
 
 const styles = StyleSheet.create({
-  wraper: {
-    marginTop: 20,
-  },
-  title: {
-    fontFamily: 'Avenir',
-    fontWeight: '800',
-    fontSize: 14,
-    lineHeight: 19.12,
-    color: COLORS.GRAY,
-  },
   center: {
     alignItems: 'center',
     justifyContent: 'center',
