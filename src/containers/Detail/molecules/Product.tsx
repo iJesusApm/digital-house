@@ -14,6 +14,7 @@ const Product = ({source}: Props) => {
         source={source ? {uri: source, cache: 'reload'} : EMPTY_DETAIL.imageSource}
         style={styles.image}
         resizeMode="contain"
+        testID="product-image-test"
       />
     </View>
   );

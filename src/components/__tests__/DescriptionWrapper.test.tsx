@@ -4,7 +4,7 @@ import {render} from '@testing-library/react-native';
 import DescriptionWrapper from '../DescriptionWrapper';
 
 describe('<DescriptionWrapper />', () => {
-  test('renders correctly', () => {
+  it('should render correctly', () => {
     const {getByText} = render(
       <DescriptionWrapper title="Title">
         <Text>Content</Text>
