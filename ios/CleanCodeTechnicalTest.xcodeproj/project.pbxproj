@@ -12,12 +12,12 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		5C964B223202444BB7BF163B /* Avenir Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 233C7BF3BB344B87838CA076 /* Avenir Black.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		5C964B223202444BB7BF163B /* Avenir Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 233C7BF3BB344B87838CA076 /* Avenir Black.ttf */; };
 		AD967793BB9A455AB60C4306 /* Avenir Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10C97621B5B1412B9DEC24ED /* Avenir Heavy.ttf */; };
-		FF6E1884A3314CB5B9D8B613 /* Avenir Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 628662BA6CFA4AF2B2FC6BB2 /* Avenir Light.ttf */; };
 		CF930CA4B09243B7A22590B6 /* Avenir Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7C7F09745214EF49D9AFCED /* Avenir Regular.ttf */; };
+		FF6E1884A3314CB5B9D8B613 /* Avenir Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 628662BA6CFA4AF2B2FC6BB2 /* Avenir Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 		00E356EE1AD99517003FC87E /* CleanCodeTechnicalTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanCodeTechnicalTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* CleanCodeTechnicalTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CleanCodeTechnicalTestTests.m; sourceTree = "<group>"; };
+		10C97621B5B1412B9DEC24ED /* Avenir Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir Heavy.ttf"; path = "../src/assets/fonts/Avenir Heavy.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* CleanCodeTechnicalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCodeTechnicalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CleanCodeTechnicalTest/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = CleanCodeTechnicalTest/AppDelegate.mm; sourceTree = "<group>"; };
@@ -41,17 +42,16 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CleanCodeTechnicalTest/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CleanCodeTechnicalTest/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		233C7BF3BB344B87838CA076 /* Avenir Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir Black.ttf"; path = "../src/assets/fonts/Avenir Black.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-CleanCodeTechnicalTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanCodeTechnicalTest.debug.xcconfig"; path = "Target Support Files/Pods-CleanCodeTechnicalTest/Pods-CleanCodeTechnicalTest.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-CleanCodeTechnicalTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanCodeTechnicalTest.release.xcconfig"; path = "Target Support Files/Pods-CleanCodeTechnicalTest/Pods-CleanCodeTechnicalTest.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests/Pods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-CleanCodeTechnicalTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CleanCodeTechnicalTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		628662BA6CFA4AF2B2FC6BB2 /* Avenir Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir Light.ttf"; path = "../src/assets/fonts/Avenir Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CleanCodeTechnicalTest/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests.release.xcconfig"; path = "Target Support Files/Pods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests/Pods-CleanCodeTechnicalTest-CleanCodeTechnicalTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7C7F09745214EF49D9AFCED /* Avenir Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir Regular.ttf"; path = "../src/assets/fonts/Avenir Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		233C7BF3BB344B87838CA076 /* Avenir Black.ttf */ = {isa = PBXFileReference; name = "Avenir Black.ttf"; path = "../src/assets/fonts/Avenir Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		10C97621B5B1412B9DEC24ED /* Avenir Heavy.ttf */ = {isa = PBXFileReference; name = "Avenir Heavy.ttf"; path = "../src/assets/fonts/Avenir Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		628662BA6CFA4AF2B2FC6BB2 /* Avenir Light.ttf */ = {isa = PBXFileReference; name = "Avenir Light.ttf"; path = "../src/assets/fonts/Avenir Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B7C7F09745214EF49D9AFCED /* Avenir Regular.ttf */ = {isa = PBXFileReference; name = "Avenir Regular.ttf"; path = "../src/assets/fonts/Avenir Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +146,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B080F108B3EA4B8987D71E86 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				233C7BF3BB344B87838CA076 /* Avenir Black.ttf */,
+				10C97621B5B1412B9DEC24ED /* Avenir Heavy.ttf */,
+				628662BA6CFA4AF2B2FC6BB2 /* Avenir Light.ttf */,
+				B7C7F09745214EF49D9AFCED /* Avenir Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,18 +168,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		B080F108B3EA4B8987D71E86 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				233C7BF3BB344B87838CA076 /* Avenir Black.ttf */,
-				10C97621B5B1412B9DEC24ED /* Avenir Heavy.ttf */,
-				628662BA6CFA4AF2B2FC6BB2 /* Avenir Light.ttf */,
-				B7C7F09745214EF49D9AFCED /* Avenir Regular.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

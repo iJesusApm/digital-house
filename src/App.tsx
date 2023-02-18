@@ -1,23 +1,9 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+
+import Navigator from './navigations/navigator';
 
 const App = () => {
-  return (
-    <View style={styles.main}>
-      <Text style={styles.label}>Digital House</Text>
-    </View>
-  );
+  return <Navigator />;
 };
-
-const styles = StyleSheet.create({
-  main: {
-    flex: 1,
-    alignSelf: 'center',
-    justifyContent: 'center',
-  },
-  label: {
-    fontFamily: 'Avenir',
-  },
-});
 
 export default App;
