@@ -4,6 +4,7 @@ import {COLORS} from '../../../styles/colors';
 import Wrapper from '../components/Wrapper';
 import {TProduct} from '../../../types/product';
 import {EMPTY_IMAGE, RIGHT_ARROW} from '../../../assets/resources';
+import {dateFormat} from '../../../utils/dateFormat';
 
 type ItemProps = {
   product: TProduct;
@@ -32,7 +33,7 @@ const Product = ({product}: ItemProps) => {
         />
         <View style={styles.textGroup}>
           <Text style={styles.productName}>{product.product}</Text>
-          <Text style={styles.productDate}>{product.createdAt}</Text>
+          <Text style={styles.productDate}>{dateFormat(product.createdAt)}</Text>
         </View>
       </View>
       <View style={styles.item}>
@@ -88,12 +89,14 @@ const styles = StyleSheet.create({
     marginLeft: 11,
   },
   productName: {
+    color: COLORS.BLACK,
     fontFamily: 'Avenir',
     fontWeight: '800',
     fontSize: 14,
     lineHeight: 19.12,
   },
   productDate: {
+    color: COLORS.BLACK,
     marginTop: 7,
     fontFamily: 'Avenir',
     fontWeight: '400',
@@ -101,6 +104,7 @@ const styles = StyleSheet.create({
     lineHeight: 16.39,
   },
   produdctPoints: {
+    color: COLORS.BLACK,
     fontFamily: 'Avenir',
     fontWeight: '800',
     fontSize: 16,
