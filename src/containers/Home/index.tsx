@@ -1,23 +1,34 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
-import {SCREENS_ROUTES} from '../../navigations/constans';
+import {View, StyleSheet, SafeAreaView} from 'react-native';
+import {COLORS} from '../../styles/colors';
+import Footer from './components/Footer';
+// import {useNavigation} from '@react-navigation/native';
+import Header from './components/Header';
+import Movements from './molecules/Movements';
+import Points from './molecules/Points';
 
 const HomeScreen = () => {
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
   return (
-    <View style={styles.wrapper}>
-      <Text style={styles.label}>Home Screen</Text>
-      <Button title="Go to Details" onPress={() => navigation.navigate(SCREENS_ROUTES.DETAIL)} />
-    </View>
+    <SafeAreaView style={styles.wrapper}>
+      <View style={styles.container}>
+        <Header />
+        <Points />
+        <Movements />
+        <Footer />
+      </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: COLORS.WHITE_BACKGROUND,
+  },
+  container: {
+    marginHorizontal: 20,
+    marginTop: 20,
   },
   label: {
     fontFamily: 'Avenir',
