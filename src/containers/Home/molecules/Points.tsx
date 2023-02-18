@@ -3,13 +3,24 @@ import {View, Text, StyleSheet} from 'react-native';
 import DescriptionWrapper from '../../../components/DescriptionWrapper';
 import {COLORS} from '../../../styles/colors';
 
-const Points = ({points = '10,00.00'}) => {
+type Props = {
+  totalPoints: number;
+};
+
+const Points = ({totalPoints}: Props) => {
+  const formattedNumber = (points: number): string => {
+    return points.toLocaleString('es-AR', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  };
+
   return (
     <DescriptionWrapper title="TUS PUNTOS">
       <View style={styles.center}>
         <View style={styles.info}>
           <Text style={styles.monthLabel}>Diciembre</Text>
-          <Text style={styles.pointsLabel}>{points} pts</Text>
+          <Text style={styles.pointsLabel}>{formattedNumber(totalPoints)} pts</Text>
         </View>
       </View>
     </DescriptionWrapper>
@@ -27,6 +38,14 @@ const styles = StyleSheet.create({
     width: 286,
     height: 143,
     borderRadius: 20,
+    shadowColor: COLORS.BLACK,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    elevation: 4,
   },
   monthLabel: {
     marginLeft: 18,

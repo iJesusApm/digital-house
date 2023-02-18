@@ -1,30 +1,51 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, StyleSheet, SafeAreaView, StatusBar} from 'react-native';
-import {data} from '../../mocks/data';
+import Loader from '../../components/Loader';
+import {getProducts} from '../../services/getProducts';
 import {COLORS} from '../../styles/colors';
+import {TProduct} from '../../types/product';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Movements from './molecules/Movements';
 import Points from './molecules/Points';
 
 const HomeScreen = () => {
-  const [products, setProducts] = useState(data);
+  const [products, setProducts] = useState([]);
+  const [isFetching, setIsFetching] = useState(true);
   const [hasMultipleOptions, setHasMultipleOptions] = useState(true);
 
+  useEffect(() => {
+    getProducts().then(data => {
+      setProducts(data);
+      setIsFetching(false);
+    });
+  }, []);
+
   const redeemedProducts = () => {
-    setProducts(data.filter(item => item.is_redemption === true));
+    setProducts(products.filter((item: TProduct) => item.is_redemption === true));
     setHasMultipleOptions(false);
   };
 
   const wonProducts = () => {
-    setProducts(data.filter(item => item.is_redemption === false));
+    setProducts(products.filter((item: TProduct) => item.is_redemption === false));
     setHasMultipleOptions(false);
   };
 
   const allProducts = () => {
-    setProducts(data);
+    setProducts(products);
     setHasMultipleOptions(true);
   };
+
+  const calculateTotalPoints = products.reduce((accumulator: number, item: TProduct) => {
+    if (!item.is_redemption) {
+      accumulator += item.points;
+    }
+    return accumulator;
+  }, 0);
+
+  if (isFetching) {
+    return <Loader />;
+  }
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -32,7 +53,7 @@ const HomeScreen = () => {
 
       <View style={styles.container}>
         <Header />
-        <Points />
+        <Points totalPoints={calculateTotalPoints} />
         <Movements list={products} />
         <Footer
           primaryPress={wonProducts}

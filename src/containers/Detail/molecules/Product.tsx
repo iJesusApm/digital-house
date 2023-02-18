@@ -25,7 +25,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: COLORS.DETAIL_BACKGROUND,
+    backgroundColor: COLORS.WHITE,
+    shadowColor: COLORS.BLACK,
+    shadowOffset: {width: 0, height: 4},
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    elevation: 5, // for android
   },
   image: {width: 200, height: 200},
 });
