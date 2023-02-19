@@ -3,17 +3,26 @@
 This is a mobile application built with React Native for the Digital House test.
 
 ## Android
-![Android-All](files/Android-All.png)
-![Android-Detail](files/Android-Detail.png)
-![Android-Redeemed](files/Android-Redeemed.png)
-![Android-Win](files/Android-Win.png)
+
+<table style="border: 0">
+  <tr>
+    <td align="center"><img src="files/Android-All.png" /></td>
+    <td align="center"><img src="files/Android-Detail.png" /></td>
+    <td align="center"><img src="files/Android-Redeemed.png" /></td>
+    <td align="center"><img src="files/Android-Win.png" /></td>
+  </tr>
+</table>
 
 ## iOS
-![iOS-All](files/iOS-All.png)
-![iOS-Detail](files/iOS-Detail.png)
-![iOS-Redeemed](files/iOS-Redeemed.png)
-![iOS-Win](files/iOS-Win.png)
 
+<table style="border: 0">
+  <tr>
+    <td align="center"><img src="files/iOS-All.png" /></td>
+    <td align="center"><img src="files/iOS-Detail.png" /></td>
+    <td align="center"><img src="files/iOS-Redeemed.png" /></td>
+    <td align="center"><img src="files/iOS-Win.png" /></td>
+  </tr>
+</table>
 
 ## Getting Started
 
@@ -47,6 +56,7 @@ To get a local copy of this project up and running, follow the steps below.
 ### Project Structure
 
 From src:
+
 - assets/: all the resources has been used in the app, like images, icon or fonts.
 - components/: reusable components used across different screens.
 - containers/: screen components that render the UI and handle user interaction.
@@ -62,5 +72,5 @@ This project uses Jest and React Native Testing Library for testing.
 
 - To run tests, run the following command:
   - `yarn test`
-- To see coverage by all tests, run the following command: 
+- To see coverage by all tests, run the following command:
   - `yarn test-coverage`
