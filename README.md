@@ -2,6 +2,19 @@
 
 This is a mobile application built with React Native for the Digital House test.
 
+## Android
+![Android-All](files/Android-All.png)
+![Android-Detail](files/Android-Detail.png)
+![Android-Redeemed](files/Android-Redeemed.png)
+![Android-Win](files/Android-Win.png)
+
+## iOS
+![iOS-All](files/iOS-All.png)
+![iOS-Detail](files/iOS-Detail.png)
+![iOS-Redeemed](files/iOS-Redeemed.png)
+![iOS-Win](files/iOS-Win.png)
+
+
 ## Getting Started
 
 To get a local copy of this project up and running, follow the steps below.
@@ -49,4 +62,5 @@ This project uses Jest and React Native Testing Library for testing.
 
 - To run tests, run the following command:
   - `yarn test`
-- To see coverage by all tests, run the following command: -`yarn test-coverage`
+- To see coverage by all tests, run the following command: 
+  - `yarn test-coverage`
