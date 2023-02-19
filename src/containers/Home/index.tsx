@@ -11,28 +11,30 @@ import Points from './molecules/Points';
 
 const HomeScreen = () => {
   const [products, setProducts] = useState([]);
+  const [list, setList] = useState([]);
   const [isFetching, setIsFetching] = useState(true);
   const [hasMultipleOptions, setHasMultipleOptions] = useState(true);
 
   useEffect(() => {
     getProducts().then(data => {
       setProducts(data);
+      setList(data);
       setIsFetching(false);
     });
   }, []);
 
   const redeemedProducts = () => {
-    setProducts(products.filter((item: TProduct) => item.is_redemption === true));
+    setList(products.filter((item: TProduct) => item.is_redemption === true));
     setHasMultipleOptions(false);
   };
 
   const wonProducts = () => {
-    setProducts(products.filter((item: TProduct) => item.is_redemption === false));
+    setList(products.filter((item: TProduct) => item.is_redemption === false));
     setHasMultipleOptions(false);
   };
 
   const allProducts = () => {
-    setProducts(products);
+    setList(products);
     setHasMultipleOptions(true);
   };
 
@@ -54,7 +56,7 @@ const HomeScreen = () => {
       <View style={styles.container}>
         <Header />
         <Points totalPoints={calculateTotalPoints} />
-        <Movements list={products} />
+        <Movements list={list} />
         <Footer
           primaryPress={wonProducts}
           secondaryPress={redeemedProducts}
